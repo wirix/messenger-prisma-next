@@ -10,6 +10,7 @@ const MobileFooter = () => {
   if (isOpen) {
     return null;
   }
+  
   return (
     <div
       className="

@@ -1,10 +1,10 @@
 'use client';
 
-import { FC } from 'react';
+import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 import clsx from 'clsx';
 import { FieldErrors, FieldValues, UseFormRegister } from 'react-hook-form';
 
-interface InputProps {
+interface InputProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
   label: string;
   id: string;
   type?: string;

@@ -1,6 +1,11 @@
 'use client';
 
-export const EmptyState = () => {
+import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
+
+interface IEmptyStateProps
+  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
+
+export const EmptyState: FC<IEmptyStateProps> = () => {
   return (
     <div
       className="

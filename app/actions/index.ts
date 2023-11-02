@@ -1,2 +1,1 @@
-export * from './getCurrentUser';
-export * from './getSession';
+export * from './getUsers';

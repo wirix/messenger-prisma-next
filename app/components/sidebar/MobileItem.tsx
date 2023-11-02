@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import clsx from 'clsx';
-import { FC } from 'react';
+import { DetailedHTMLProps, FC, HTMLAttributes } from 'react';
 
 interface MobileItemProps {
   href: string;
