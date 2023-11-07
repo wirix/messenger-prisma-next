@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { User } from '@prisma/client';
 
 import { Avatar } from '@/app/components/Avatar';
+import { Button } from '@/app/components';
 // import LoadingModal from '@/app/components/modals/LoadingModal';
 
 interface UserBoxProps {
@@ -21,9 +22,6 @@ export const UserBox: FC<UserBoxProps> = ({ data }) => {
     axios
       .post('/api/conversations', { userId: data.id })
       .then((data) => {
-        debugger
-        console.log("🚀 ~ file: UserBox.tsx:25 ~ .then ~ data:", data)
-        
         router.push(`/conversations/${data.data.id}`);
       })
       .finally(() => setIsLoading(false));
