@@ -11,7 +11,7 @@ export const useOtherUser = (convesation: FullConversationType | {
     const currentUserEmail = session?.data?.user?.email;
     const otherUser = convesation.users.filter((user) => user.email !== currentUserEmail);
 
-    return otherUser;
+    return otherUser[0];
   }, [session?.data?.user?.email, convesation.users]);
 
 	return otherUser;

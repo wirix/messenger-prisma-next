@@ -1,6 +1,6 @@
 'use client';
 
-import { EmptyState } from '../components';
+import { EmptyState } from '@/app/components';
 
 export default function Users() {
   return (
