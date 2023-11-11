@@ -3,12 +3,12 @@ import { Conversation, Message, User } from '@prisma/client';
 //   const conversations = await getConversations(); // return messages and users interface
 // but import { Conversation } from '@prisma/client'; { initialItems }: { initialItems: Conversation[] } in conversaions/components/ConversationsList initialItems wait some Conversation[] (without messages and users why-to)
 
-export type FullMessageText = Message & {
+export type FullMessageType = Message & {
   sender: User;
   seen: User[];
 };
 
 export type FullConversationType = Conversation & {
   users: User[];
-  messages: FullMessageText[];
+  messages: FullMessageType[];
 };
