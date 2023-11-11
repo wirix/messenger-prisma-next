@@ -5,7 +5,7 @@ export const getConversationById = async (id: string) => {
   try {
     const currentUser = await getCurrentUser();
 
-    if (currentUser?.email) {
+    if (!currentUser?.email) {
       return null;
     }
 
@@ -17,6 +17,8 @@ export const getConversationById = async (id: string) => {
         users: true,
       },
     });
+    
+    return conversation;
   } catch (e: any) {
     return null;
   }
