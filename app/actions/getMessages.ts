@@ -1,10 +1,10 @@
 import prisma from '@/app/libs/prismadb';
 
-export const getMessages = async (id: string) => {
+export const getMessages = async (conversationId: string) => {
   try {
     const messages = await prisma.message.findMany({
       where: {
-        conversationId: id,
+        conversationId,
       },
       include: {
         sender: true,
@@ -14,7 +14,7 @@ export const getMessages = async (id: string) => {
         createdAt: 'asc',
       },
     });
-		
+
     return messages;
   } catch (e: any) {
     return [];
